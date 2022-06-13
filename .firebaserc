@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "gesc-dev": {
+      "hosting": {
+        "gesc": [
+          "gesc-dev"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "gesc-dev"
+  }
+}

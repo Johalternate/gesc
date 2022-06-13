@@ -1,0 +1,116 @@
+
+.wrapper {
+    background-color: #1a2430;
+    color: white;
+    
+}
+.header {
+    padding: 0 16px;
+}
+.header-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 16px;
+}
+
+.menu {
+    margin: 8px 0;
+    padding: 8px 16px;
+    background-color: #353942;
+    border-radius: 8px;
+}
+
+.menu-button {
+    appearance: none;
+    border: none;
+    background-color: transparent;
+    background-size: cover;
+    text-align: center;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    margin: 0 4px;
+    border-radius: 8px;
+    outline: 1px solid rgba(255, 255, 255, 0.514);
+    height: 36px;
+    width: 36px;
+}
+
+.menu-button:hover {
+    background-color: #ffffff0e;
+}
+
+.logo {
+    width: 32px;
+    height: 32px;
+    justify-self: center;
+}
+
+.header-mid {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #232f3f;
+    padding: 8px 16px;
+}
+
+.header-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 16px;
+    background-color: #343839;
+}
+
+.logged-users {
+    display: flex;
+}
+
+.logged-user {
+    display: flex;
+    flex-direction: row;
+    margin-right: -10px;
+}
+
+.avatar {
+    border-radius: 100%;
+    width: 32px;
+    filter: grayscale(1);
+}
+
+.avatar:hover {
+    outline: 2px solid green;
+    filter: grayscale(0);
+}
+
+.btn {
+    border-color: #ffffff2c;
+    margin-right: 4px;
+}
+
+.user-search {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+::ng-deep .mat-form-field {
+    .mat-input-element {
+        color: slategray;
+    }
+    .mat-form-field-label {
+        color: slategray;
+    }
+    .mat-form-field-underline {
+        background-color: slategray;
+    }
+    .mat-form-field-ripple {
+        background-color: slategray;
+    }
+    .mat-form-field-required-marker {
+        color: slategray;
+    }
+}
