@@ -1,12 +1,13 @@
-
 .wrapper {
     background-color: #1a2430;
     color: white;
-    
+
 }
+
 .header {
     padding: 0 16px;
 }
+
 .header-top {
     display: flex;
     flex-direction: row;
@@ -44,8 +45,8 @@
 }
 
 .logo {
-    width: 32px;
-    height: 32px;
+    width: 48px;
+    height: 48px;
     justify-self: center;
 }
 
@@ -87,8 +88,8 @@
 }
 
 .btn {
-    border-color: #ffffff2c;
-    margin-right: 4px;
+    border-color: #ffffff57;
+    margin: 6px 0;
 }
 
 .user-search {
@@ -97,20 +98,20 @@
     align-items: center;
 }
 
-::ng-deep .mat-form-field {
-    .mat-input-element {
-        color: slategray;
-    }
-    .mat-form-field-label {
-        color: slategray;
-    }
-    .mat-form-field-underline {
-        background-color: slategray;
-    }
-    .mat-form-field-ripple {
-        background-color: slategray;
-    }
-    .mat-form-field-required-marker {
-        color: slategray;
+.header-bottom-left {
+    display: flex;
+    flex-direction: row;
+}
+
+.language-picker-select {
+    font-size: 14px;
+}
+
+::ng-deep {
+    .mat-toolbar {
+        background-color: #1a2430;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
     }
 }
