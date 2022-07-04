@@ -3,6 +3,9 @@
 }
 .header {
     border-bottom: 8px solid orange;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .title {
     font-weight: bold;   
@@ -10,4 +13,20 @@
 
 .mat-radio-button {
     margin: 0 12px;
-  }
+}
+
+mat-form-field {
+    margin: 0 2px;
+}
+
+.vertical-center {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.submit-button-box {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}

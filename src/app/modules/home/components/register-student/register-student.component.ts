@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import {FormBuilder, FormControl, Validators} from '@angular/forms';
 
 @Component({
@@ -7,6 +7,8 @@ import {FormBuilder, FormControl, Validators} from '@angular/forms';
   styleUrls: ['./register-student.component.scss']
 })
 export class RegisterStudentComponent implements OnInit {
+  
+  @Input() closeButtonCallback!:  () => void;
 
   firstName = new FormControl('primary');
   secondName = new FormControl('primary');
@@ -24,4 +26,13 @@ export class RegisterStudentComponent implements OnInit {
   getFontSize() {
     return Math.max(10, this.fontSizeControl.value || 0);
   }
+
+  close() {
+
+    if (this.closeButtonCallback) {
+      this.closeButtonCallback();
+    }
+
+  }
+
 }

@@ -60,7 +60,7 @@ export class ApiService {
       lastname: faker.name.lastName(),
       lastname2: faker.name.lastName(),
       idType: idTypes[Math.floor(Math.random() * idTypes.length)],
-      id: Math.floor(Math.random()*(10^11)),
+      id: Math.floor(Math.random()*(10**11)),
       email: faker.internet.email(),
       phone: faker.phone.phoneNumber(),
       sex: genders[Math.floor(Math.random() * genders.length)],

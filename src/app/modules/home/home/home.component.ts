@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { RegisterStudentComponent } from '../components/register-student/register-student.component';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { NotificationsService } from 'src/app/core/notifications/notifications.service';
 
 @Component({
   selector: 'app-home',
@@ -10,10 +11,10 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(public modal: MatDialog, private _snackBar: MatSnackBar) { }
+  constructor(public modal: MatDialog, private _snackBar: MatSnackBar, private notifications: NotificationsService) { }
 
   ngOnInit(): void {
-    this.openModal();
+    
   }
 
   openModal(): void {
@@ -22,19 +23,17 @@ export class HomeComponent implements OnInit {
     });
 
     modalRef.backdropClick().subscribe(result => {
-      this.openSnackBar();
+      this.notify('Registro cancelado', 'Descartar');
     });
 
     modalRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed');
     });
+
   }
 
-  openSnackBar() {
-    this._snackBar.open('Registro cancelado', 'Cerrar', {
-      horizontalPosition: 'center',
-      verticalPosition: 'bottom',
-    });
+  notify(message: string, action: string) {
+    this.notifications.notify(message, action)
   }
   
 }

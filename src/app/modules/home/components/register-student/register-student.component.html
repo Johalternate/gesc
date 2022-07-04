@@ -4,31 +4,26 @@
         <span class="title">Registrar Estudiante y/o Personal</span>
     </div>
     <br>
-    <form>
-        <p>
+    <form onsubmit="return false">
+        <div class="vertical-center">
             <mat-form-field appearance="fill">
                 <mat-label>Nombre(s)</mat-label>
                 <input matInput>
             </mat-form-field>
-            <span class="divider">&nbsp;</span>
             <mat-form-field appearance="fill">
                 <mat-label>Apellido(s)</mat-label>
                 <input matInput>
             </mat-form-field>
-        </p>
+
+            <mat-radio-group>
+                <mat-radio-button value="always">Femenino</mat-radio-button>
+                <mat-radio-button value="auto">Masculino</mat-radio-button>
+            </mat-radio-group>
+        </div>
+
         <p>
             <mat-form-field appearance="fill">
-                <mat-label>Primer Apellido</mat-label>
-                <input matInput>
-            </mat-form-field>
-            <span class="divider">&nbsp;</span>
-            <mat-form-field appearance="fill">
-                <mat-label>Segundo Apellido</mat-label>
-                <input matInput>
-            </mat-form-field>
-            <span class="divider">&nbsp;</span>
-            <mat-form-field appearance="fill">
-                <mat-label>Tipo de identificacion</mat-label>
+                <mat-label>Tipo de Identificacion</mat-label>
                 <mat-select>
                     <mat-option value="one">Cedula de identidad y electoral</mat-option>
                     <mat-option value="one">Numero Unico de Identidad</mat-option>
@@ -37,47 +32,64 @@
                     <mat-option value="one">Otros</mat-option>
                 </mat-select>
             </mat-form-field>
-        </p>
-
-        <p>
             <mat-form-field appearance="fill">
                 <mat-label>Numero de Identificacion</mat-label>
                 <input matInput type="tel">
             </mat-form-field>
-            <span class="divider">&nbsp;</span>
             <mat-form-field appearance="fill">
                 <mat-label>Correo Electronico</mat-label>
                 <input matInput type="email">
             </mat-form-field>
-            <span class="divider">&nbsp;</span>
             <mat-form-field appearance="fill">
                 <mat-label>Telefono</mat-label>
                 <input matInput type="tel">
             </mat-form-field>
         </p>
-
-
-        <div>
-            <label>Sexo: </label>
-            <mat-radio-group>
-                <mat-radio-button value="always">Femenino</mat-radio-button>
-                <mat-radio-button value="auto">Masculino</mat-radio-button>
-            </mat-radio-group>
-
+        <p>
             <mat-form-field appearance="fill">
                 <mat-label>Fecha de Nacimiento</mat-label>
                 <input matInput [matDatepicker]="picker">
                 <mat-hint>Mes/Dia/Año</mat-hint>
                 <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
                 <mat-datepicker #picker></mat-datepicker>
-              </mat-form-field>
-              <span class="divider">&nbsp;</span>
-              <mat-form-field appearance="fill">
-                <mat-label>Telefono</mat-label>
+            </mat-form-field>
+
+            <mat-form-field appearance="fill">
+                <mat-label>Lugar de Nacimiento</mat-label>
                 <input matInput type="text">
             </mat-form-field>
+            <mat-form-field appearance="fill">
+                <mat-label>Lugar de Residencia</mat-label>
+                <input matInput type="text">
+            </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field appearance="fill" style="width: 440px;">
+                <mat-label>Direccion</mat-label>
+                <input matInput type="text">
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+                <mat-label>Sector</mat-label>
+                <input matInput type="text">
+            </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field appearance="fill">
+                <mat-label>Año Lectivo</mat-label>
+                <input matInput type="text">
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+                <mat-label>Sede - Jornada</mat-label>
+                <input matInput type="text">
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+                <mat-label>Grado</mat-label>
+                <input matInput type="text">
+            </mat-form-field>
+        </p>
+        <div class="submit-button-box">
+            <button mat-raised-button color="accent">Completar Registro</button>
         </div>
-
     </form>
 
 </div>

@@ -7,12 +7,16 @@ import { HomeComponent } from './home/home.component';
 import { RegisterStudentComponent } from './components/register-student/register-student.component';
 
 import { MaterialModule } from '../material/material.module';
+import { StudentsComponent } from './pages/students/students.component';
+import { StudentCardComponent } from './components/student-card/student-card.component';
 
 
 @NgModule({
   declarations: [
     HomeComponent,
-    RegisterStudentComponent
+    RegisterStudentComponent,
+    StudentsComponent,
+    StudentCardComponent
   ],
   imports: [
     HomeRoutingModule,
