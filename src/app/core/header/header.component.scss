@@ -115,3 +115,19 @@
         justify-content: space-between;
     }
 }
+
+.profile {
+    width: 125px;
+    overflow: visible;
+    position: absolute;
+    background-color: white;
+    margin-left: 25px;
+    margin-top: 6px;
+    padding: 4px;
+    border-radius: 4px;
+    background: linear-gradient(to bottom, #fff, #bbb) content-box, linear-gradient(to right, #e94332, #a91302) padding-box, linear-gradient(to right, #0867a6, #4aa9e8) border-box;
+}
+
+.header-mid-left {    
+    
+}
