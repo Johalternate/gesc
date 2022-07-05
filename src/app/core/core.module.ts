@@ -7,6 +7,7 @@ import { FooterComponent } from './footer/footer.component';
 import { SharedModule } from '../modules/shared/shared.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from '../modules/material/material.module';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { MaterialModule } from '../modules/material/material.module';
     SharedModule,
     FormsModule, 
     ReactiveFormsModule,
-    MaterialModule
+    MaterialModule,
+    RouterModule
   ],
   exports: [
     HeaderComponent,

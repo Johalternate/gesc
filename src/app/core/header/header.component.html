@@ -2,7 +2,7 @@
     <button mat-icon-button style="color: white;">
         <mat-icon>menu</mat-icon>
     </button>
-    <span><img class="logo" src="assets/img/logo.png"></span>
+    <a [routerLink]="['/home']"><img class="logo" src="assets/img/logo.png"></a>
 
     <div class="language-picker">
         <form action="" class="language-picker-form">
@@ -17,7 +17,7 @@
 <div class="wrapper">
     <div class="header header-mid">
         <div class="header-mid-left">
-
+            <img class="profile" src="assets/img/placeholder.png">
         </div>
 
         <div class="menu">
@@ -30,7 +30,7 @@
     </div>
 
     <div class="header header-bottom">
-        <div class="header-bottom-left">
+        <div class="header-bottom-left" style="margin-left: 175px;">
             <button class="btn" mat-stroked-button>Gestor Escolar</button>
             <div class="btn-divider" style="width: 8px;"></div>
             <button class="btn" mat-stroked-button>Gestor Comercial</button>

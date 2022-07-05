@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { faker } from '@faker-js/faker';
 import { map, Observable, startWith } from 'rxjs';
 
@@ -19,7 +20,7 @@ export class HeaderComponent implements OnInit {
   loggedUsers: Observable<Person[]> = this.db.getOnlinePersonel();
   students: Observable<Person[]> = this.db.getStudents();
   
-  constructor(private db: ApiService) { }
+  constructor(private db: ApiService, private router: Router) { }
 
   ngOnInit(): void {
     // populate menu
@@ -27,6 +28,10 @@ export class HeaderComponent implements OnInit {
       this.menu.push( { name: faker.hacker.noun(), icon: `${i}` } );
     }
 
+  }
+
+  goHome(): void {
+    this.router.navigateByUrl('/home');
   }
 
 }
